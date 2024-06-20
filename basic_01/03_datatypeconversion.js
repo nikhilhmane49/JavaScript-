@@ -137,3 +137,41 @@ console.log(converstring);// output will be 33 ---but the typeof will be string
 
 
 //********************************## opertion*****************
+
+
+console.log(2+2);
+console.log(2*2);
+console.log(2**2);
+console.log(2-2);
+console.log(2/2);
+console.log(2%2);
+
+
+
+let str1="hello";
+let str2=" nikhil";
+
+console.log(str1+str2);// both are string //output will be hello  nikhil
+
+console.log("1"+2);  //output is 12
+
+console.log(1+"2"); //output is 12
+
+console.log("1"+2+2);//output will be 122 (because the first elementis string so it will convert all the element in the string)
+
+console.log(1+2+"2");//output will be 32(because the fisrt elemt is number it convert the the element in the number)
+
+console.log(true); //output will be true
+
+console.log(+true); //output will be 1
+
+console.log(+"")//output will be 0
+
+
+//###########******prefix and postfix********
+
+let user=100;
+console.log(user);//output will be 100
+console.log(user++);//output will be 100 //postfix
+console.log(user);//output will be 101 
+console.log(++user);//output will be 102 //prefix
