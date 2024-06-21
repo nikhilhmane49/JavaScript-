@@ -19,6 +19,25 @@
 //7)BigInt--->value that is biger 
 
 
+//****symbol */
+let Id=Symbol("123");
+
+let anotherId=Symbol("123");
+
+console.log(Id==anotherId); // the output will be false
+
+console.log(Id);
+console.log(anotherId);
+
+console.log(Id);//datatype of symbol is allways a symbol
+
+
+//********BigInt */
+
+let BigNumber=4156328794566n // representation of bigint using this small n
+
+console.log(typeof BigNumber); //datatype of BigInt is allways a BigInt
+
 //########*********
 
 //javascript is a dynamic language.
@@ -39,3 +58,39 @@
 //1)array
 //2)Object
 //3)function
+
+//datatype of this non-premitive is allways a object, but for the function datatype is allways a object-function
+
+
+//****array */
+
+let arrayvar=["nikhil","prasad","diva","durvesh","pranav","sujata"];
+
+console.log(typeof arrayvar); //output is object
+
+console.log(arrayvar);
+
+
+//*****object */
+
+let objectvar={
+    name:"nikhil",
+    age:21
+
+};
+
+console.log(typeof objectvar);//output is object
+
+console.log(objectvar);
+
+
+//*********function */
+
+const funcvar=function(){
+    console.log("hello nikhil");
+}
+
+
+console.log(typeof funcvar);// output is function(object-function)
+
+console.log(funcvar);
