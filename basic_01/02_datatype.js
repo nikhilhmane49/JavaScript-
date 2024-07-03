@@ -21,6 +21,14 @@
 //3)function
 
 
+//premitive
+//Characteristics: Immutable, fixed size, stored directly in the stack.
+
+
+//non-premitive
+//Characteristics: Mutable, dynamic size, stored in the heap with a reference stored in the stack.
+
+
 let age=10;
 
 let fristname="nikhil";
