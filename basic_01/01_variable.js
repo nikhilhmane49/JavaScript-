@@ -9,6 +9,15 @@ const accoutId=1253;
 //1)let  ---> mostly used nowadays 
 //2)var ----> we dose not used this variable(because it dose not have any scope ) 
 
+//Re-declaration:
+//var: Can be re-declared within the same scope.
+//let: Cannot be re-declared within the same scope.
+
+
+//Global Object Property:
+//var: Creates a property on the global object (e.g., window in browsers).
+//let: Does not create a property on the global object.
+
 
 let accoutEmail="hello@gmail.com";
 
