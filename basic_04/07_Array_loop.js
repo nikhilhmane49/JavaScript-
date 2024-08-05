@@ -88,6 +88,7 @@ for (const key in programing) {
 
 
 //For each loop
+//For each loop does not retrun the value---->it does not have retrun value---->Undefined 
 
 const coding =["js","c++","java","python"]
 
