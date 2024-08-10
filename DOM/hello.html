@@ -25,6 +25,12 @@
         <p>Lorem ipsum dolor sit amet.</p>
 
         <input type="password" name="" id="">
+
+        <ul>
+            <li class="list_item">one</li>
+            <li class="list_item">Two</li>
+            <li class="list_item">three</li>
+        </ul>
     </div>
 </body>
 </html>
@@ -62,11 +68,6 @@
 
 
 
-//****getElementsByClassName
-
-//document.getElementsByClassName('heading')--->>
-//HTMLCollection(2) [h1#title.heading, h1#title.heading, title: h1#title.heading]0: h1#title.heading1: h1#title.headingtitle: h1#title.headinglength: 2[[Prototype]]: 
-
 
 
 //******querySelector
@@ -74,6 +75,12 @@
 // document.querySelector('h1')---><h1 id=​"title" class=​"heading">​…​</h1>​
 
 // document.querySelector('h2')
+
+//const ulli=document.querySelector('ul')
+
+//const ulli=document.querySelector('ul')
+
+//litype.style.backgroundColor='green'---->green
 
 
 
@@ -89,3 +96,29 @@
 //querySelectorAll
 
 //document.querySelectorAll('h2')----->NodeList(3) [h2, h2, h2]
+
+//litype.style.backgroundColor='green'----->NodeList(3) [li, li, li]
+
+//const templistli=document.querySelectorAll('li')
+
+//templistli ------>NodeList(3) [li, li, li]
+
+//templistli[0].style.backgroundColor='green'--->green
+
+//templistli.forEach((l)=>{
+    l.style.backgroundColor='green'
+})
+
+
+//****getElementsByClassName
+
+//document.getElementsByClassName('heading')--->>
+//HTMLCollection(2) [h1#title.heading, h1#title.heading, title: h1#title.heading]0: h1#title.heading1: h1#title.headingtitle: h1#title.headinglength: 2[[Prototype]]: 
+
+//document.getElementsByClassName('list_item')----->HTMLCollection(3) [li.list_item, li.list_item, li.list_item]
+
+//const templist=document.getElementsByClassName('list_item')
+
+//Array.from(templist)----->(converted into array)---->(3) [li.list_item, li.list_item, li.list_item]
+
+
