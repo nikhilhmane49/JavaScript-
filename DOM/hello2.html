@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>DOM_3</title>
+</head>
+<body>
+
+    
+
+</body> 
+
+<script>
+
+
+//creat the element
+
+const div=document.createElement('div');
+
+console.log(div);
+
+//seting the attribute of that elment
+div.className="main";
+div.id='myid';
+
+div.setAttribute("titel" ,"chai aur code");
+div.style.background='green'
+div.style.padding="15px"
+
+const addtext=document.createTextNode("chai aur code");
+
+div.appendChild(addtext);
+
+document.body.appendChild(div);
+
+
+</script>
+</html>
