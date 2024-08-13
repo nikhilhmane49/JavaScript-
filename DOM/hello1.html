@@ -1,0 +1,61 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>DOM_2</title>
+</head>
+<body >
+    <div class="parent">
+        <div class="day">Monday</div>
+        <div class="day">Tuseday</div>
+        <div class="day">Wednesday</div>
+        <div class="day">Thursday</div>
+    </div>
+</body>
+
+
+<script>
+
+    const parent =document.querySelector('.parent');
+    console.log(parent);  //---->this will give you whole parent div
+
+    console.log(parent.children);//----->it will give html collection of multiple div
+
+
+   console.log(parent.children[1]);//------>it will give index value of children ---->Tuseday
+  
+    
+for (let i = 0; i < parent.children.length; i++) {
+    
+    console.log(parent.children[i].innerHTML); //---->it will give you all the innerhtml of children 
+    
+    
+}
+
+
+parent.children[1].style.color="green";
+
+console.log(parent.firstElementChild);//---->this while give you first child of parent 
+
+console.log(parent.lastElementChild);//---->this while give you last child of parent 
+
+
+const dayone=document.querySelector('.day');
+console.log(dayone);//---->child elment
+
+console.log(dayone.parentElement); //--->this while give whole parent
+
+console.log(dayone.nextElementSibling); //-->this will give you next chlid elment of given child
+
+
+console.log("NODES:", parent.childNodes);
+
+//-------->NodeList(9) [text, div.day, text, div.day, text, div.day, text, div.day, text]
+
+
+
+
+</script>
+
+</html>
