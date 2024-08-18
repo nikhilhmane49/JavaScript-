@@ -1,0 +1,71 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>DOM_4</title>
+</head>
+<body style="background-color: #212121; color: #fff;">
+    <ul class="language">
+<li>Javascript</li>
+    </ul>
+</body>
+
+<script>
+
+    //********add the new li in a ul
+
+    //method 1 using innerHTML
+function addLaguage(lagname){
+const li=document.createElement('li');
+li.innerHTML=lagname;
+document.querySelector('.language').appendChild(li);
+}
+
+
+//method 2 using createTextNode
+
+function addOptiLanguage(lagname){
+    const li=document.createElement('li');
+    li.appendChild(document.createTextNode(lagname));
+    document.querySelector('.language').appendChild(li);
+
+}
+
+addLaguage("Python");
+addLaguage("c++")
+
+addOptiLanguage("java");
+
+
+//*****Edit
+
+
+//method 1 innerHTML
+
+const secondLang1=document.querySelector("li:nth-child(1)");
+secondLang1.innerHTML="HTML"
+
+//methode 2   replacwith
+const secondLang=document.querySelector("li:nth-child(2)");
+const newli=document.createElement('li');
+newli.textContent="Nikhil"
+secondLang.replaceWith(newli);
+
+
+//method 3  outerHTML
+
+const secondLang3=document.querySelector("li:nth-child(3)");
+secondLang3.outerHTML='<li>TypeScrip</li>';
+
+
+
+//******Remove
+
+const revomeEle=document.querySelector('li:last-child');
+revomeEle.remove();
+
+</script>
+
+
+</html>
