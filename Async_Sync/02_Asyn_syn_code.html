@@ -1,0 +1,32 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Asyn_Syn</title>
+</head>
+<body>
+    <h1>Nikhil mane </h1>
+    <button class="start">Start</button>
+    <button class="stop">Stop</button>
+
+</body>
+<script>
+
+let startvar;
+
+document.querySelector('.start').addEventListener('click',function(){
+    startvar=setInterval(function(){
+console.log("nikhil", Date.now());
+},1000)
+});
+
+document.querySelector('.stop').addEventListener('click',function(){
+
+    clearInterval(startvar);
+    console.log('stop');
+    
+})
+
+</script>
+</html>
