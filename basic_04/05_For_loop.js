@@ -59,3 +59,35 @@ console.log(`the value of index is ${index}`);
 
     
 }
+
+
+
+
+//****for in loop
+
+
+//It is typically used when you want to iterate over the keys of an object.
+
+const person = {
+    name: 'Alice',
+    age: 25,
+    city: 'New York'
+};
+
+for (let key in person) {
+    console.log(key + ': ' + person[key]);
+}
+
+
+
+//*******for of loop
+
+
+//It is typically used when you want to iterate over the values of an array or any iterable.
+
+
+const numbers = [10, 20, 30];
+
+for (let value of numbers) {
+    console.log(value);
+}
