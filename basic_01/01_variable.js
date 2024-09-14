@@ -26,6 +26,10 @@ accountEmail="byee@gmail.com"; //--> in this we can change the value of the vari
 
 accout="hello you are you"; //---> in this the variable is assigned but it is bad to assign the variable
 
+//-->>Without declaring accout using var, let, or const, JavaScript implicitly creates the variable as a global variable. 
+//   The system does not automatically assign var, let, or const; instead, it creates a property on the global object 
+//   (in a browser, the global object is window).
+
 
 console.log(accoutId);  //--->In this only single variable can print
 
