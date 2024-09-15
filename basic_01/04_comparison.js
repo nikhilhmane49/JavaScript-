@@ -29,6 +29,10 @@ console.log(null>=0);//output is true
 
 console.log(null<=0);//output is true
 
+console.log(null >= 1) //output is  false
+
+console.log(null <= 1) // output is  true
+
 
 //----->the reason is that an equality cheeck == and comaparisons <,>,<=,>=work diffrently
 // comparisons convert null to a number,trating it as 0.
