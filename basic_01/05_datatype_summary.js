@@ -61,6 +61,9 @@ console.log(typeof BigNumber); //datatype of BigInt is allways a BigInt
 
 //datatype of this non-premitive is allways a object, but for the function datatype is allways a object-function
 
+//Clarification Needed: For functions, the data type isn't strictly "object". When you use typeof on a function,
+//  it returns "function", which is a subtype of "object".
+
 
 //****array */
 
