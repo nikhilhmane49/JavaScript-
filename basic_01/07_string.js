@@ -72,6 +72,13 @@ console.log(newstring);
 const anotherstring=gamename.slice(-8 ,4) // it is the same as substring but we can give the index in negative also
 console.log(anotherstring);
 
+
+// gamename.slice(-8, 4):
+// The string 'nikhil' has a length of 6.
+// -8 is out of bounds (it's less than the length of the string). When a negative start index is smaller than the length, it behaves like 0.
+// Therefore, gamename.slice(0, 4) is executed, which extracts characters from index 0 to 4 (but not including 4).
+// The result is 'nikh'.
+
  const anotherstring2=gamename.slice(); // this will print your entire string 
 
 console.log(anotherstring2);
@@ -81,6 +88,8 @@ const anotherstring3=gamename.slice(-2); // this will print form -2 to the end o
 console.log(anotherstring3);
 
 // In the slicing the index of the string   is negative when we acess the form the laste element of the string(-1,-2,-3,-4....so on)
+
+
 
  
 
