@@ -55,6 +55,9 @@ console.log(undefined>=0);//output is false
 
 console.log(undefined<=0);//output is false
 
+//----->Similarly, undefined is treated as NaN.
+
+
 
 
 //****=== */
