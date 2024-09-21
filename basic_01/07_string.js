@@ -59,7 +59,9 @@ console.log(gamename.indexOf('n'));//this give you at which character  which  in
 
 //*******sub-string */
 
-const newstring=gamename.substring(0 ,4) // the string into substring ,but in this the end index (i.e 4) is not included in this substring and we can not use negative index in it
+const newstring=gamename.substring(0 ,4) // the string into substring  we can not use negative index in it
+
+//substring( startingPoint , length_of_sub-strings)
 
 console.log(newstring);
 
