@@ -13,6 +13,8 @@ console.log(dateNow.getFullYear());
 console.log(dateNow.getMonth());
 console.log(dateNow.getDate());
 console.log(dateNow.getHours());
+console.log(dateNow.getMinutes());
+console.log(dateNow.getSeconds());
 
 
 //convert this date to string and see the output
