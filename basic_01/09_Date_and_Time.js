@@ -7,6 +7,14 @@ console.log(myDate); //ouput will be 2024-06-24T10:21:27.093Z
 console.log(typeof myDate);//the Date is an object
 
 
+let dateNow = new Date();
+
+console.log(dateNow.getFullYear());
+console.log(dateNow.getMonth());
+console.log(dateNow.getDate());
+console.log(dateNow.getHours());
+
+
 //convert this date to string and see the output
 
 console.log(myDate.toString()); //the output is easy and can be esayly read before covert the date was not readable //2024-06-24T10:21:27.093Z
