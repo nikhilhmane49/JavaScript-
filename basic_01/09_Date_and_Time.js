@@ -56,3 +56,29 @@ let myCreatedDate4=new Date("01-14-2023");// for this MM-DD-YY ---here note that
 console.log(myCreatedDate4.toLocaleString()); //output will be 1/14/2023, 12:00:00 AM
 
 
+
+//*************getTime */
+
+//this use to get the time Required by the function---->
+function calculatesum(n){
+    let a=0;
+    for (let i = 0; i < n; i++){
+        a = a + i;
+    }
+    return a;
+}
+
+let befor = new Date();
+
+let beforFunctioncallMS = befor.getTime();
+
+calculatesum(10000000);
+
+let after = new Date();
+
+ let afterFunctioncallMS = after.getTime();
+
+console.log(afterFunctioncallMS-beforFunctioncallMS);
+
+
+
