@@ -113,3 +113,24 @@ fetch('https://jsonplaceholder.typicode.com/users')
 
 
 
+
+//***********************************
+
+// user will ask for a number between 0 to 9 and if the nu
+// mber is below 5 then res or rej
+
+var ans = new Promise((res, rej) => {
+    var n = Math.floor(Math.random() * 10);
+    console.log("Random number:", n);
+    if (n < 5) {
+        return res();
+    } else {
+        return rej();
+    }
+});
+
+ans.then(function () {
+    console.log("below 5");
+}).catch(function () {
+    console.log("above 5");
+});
