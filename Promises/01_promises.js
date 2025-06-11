@@ -134,3 +134,47 @@ ans.then(function () {
 }).catch(function () {
     console.log("above 5");
 });
+
+
+
+
+
+
+//************promise chaining */
+
+//4 task is give solve this using the promise
+
+// Wake up early in the morning and freshen up.
+
+// Eat a healthy breakfast to start the day.
+
+// Have lunch in the afternoon after finishing your main work.
+
+// Relax in the evening, eat dinner, and go to bed.
+    
+
+
+
+var ans= new Promise((res, rej) => {
+    console.log("Wake up early in the morning and freshen up.");
+    res();
+}).then(() => {
+    return new Promise((res, rej) => {
+        console.log("Eat a healthy breakfast to start the day.");
+        res();
+    });
+}).then(() => {
+    return new Promise((res, rej) => {
+        console.log("Have lunch in the afternoon after finishing your main work.");
+        res();
+    });
+}).then(() => {
+    return new Promise((res, rej) => {
+        console.log("Relax in the evening, eat dinner, and go to bed.");
+        res();
+    });
+}).catch((err) => {
+    console.error("An error occurred:", err);
+});
+
+    
