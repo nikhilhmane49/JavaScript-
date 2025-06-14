@@ -1,0 +1,249 @@
+
+
+//*************who new keyword is important and who it is used */
+
+function multiply(a, b) {
+  return a * b;
+}
+
+
+multiply.power = 2;
+
+console.log(multiply(2, 3)); // 6
+console.log(multiply.power); // 2
+console.log(multiply.prototype); // {}
+
+
+
+function User(name, score) {
+  this.name = name;
+  this.score = score;
+}
+
+User.prototype.incrementScore = function () {
+    this.score++;
+    console.log(`${this.name}'s score is now ${this.score}`);
+}
+User.prototype.printName = function () {
+    console.log(`User's name is ${this.name}`);
+}
+
+const chai = new User("Chai", 10);
+const coffee = new User("Coffee", 20);
+
+chai.incrementScore(); // Chai's score is now 11
+coffee.incrementScore(); // Coffee's score is now 21    
+chai.printName(); // User's name is Chai
+coffee.printName(); // User's name is Coffee
+
+
+
+
+
+//***** */ What happens when you use the new keyword in JavaScript?
+
+
+
+// A new object is made
+// → JavaScript creates a fresh, empty object.
+
+// Prototype is connected
+// → This new object gets linked to the prototype of the constructor function, so it can use the methods and properties from there.
+
+// The constructor function runs
+// → JavaScript runs the constructor function with the given values, and this refers to the new object.
+// → If the constructor doesn’t return anything, JavaScript automatically returns the new object.
+
+
+// The object is returned
+// → If your constructor doesn’t return a non-primitive value (like an object, array, or function), JavaScript will return the new object that was created.
+// → But if you do return an object/array/function, that returned value will be used instead of the new one.
+
+
+
+
+//******* */ Let's match the code to the 4-step theory:
+
+
+// What happens when new User("Chai", 10) is called?
+
+// 🔸 Step 1: A new object is created
+
+// const chai = new User("Chai", 10);
+// JavaScript creates a new empty object, like: {}.
+
+// This object is going to be assigned to chai.
+
+// 🔸 Step 2: Prototype is linked
+// JavaScript links this new object (chai) to User.prototype.
+
+// So now, chai.__proto__ === User.prototype, which gives it access to:
+
+// incrementScore()
+
+// printName()
+
+// 🔸 Step 3: Constructor is called
+
+// function User(name, score) {
+//   this.name = name;
+//   this.score = score;
+// }
+// The constructor runs, and this refers to the new object.
+
+// It assigns:
+
+// this.name = "Chai"
+
+// this.score = 10
+
+// 🔸 Step 4: Object is returned
+// Since the constructor does not explicitly return an object, the newly created object is returned by default.
+
+// chai is now:
+
+// {
+//   name: "Chai",
+//   score: 10,
+//   __proto__: User.prototype // so it can access methods
+// }
+
+
+
+//****************************Prototype */
+
+// Define an array and an object
+let myname = ["nikhil", "rohit", "ram"];
+
+let mypower = {
+    name: "Nikhil",
+    age: 22,
+    hobbies: ["cricket", "coding"],
+    grearting: function () {
+        console.log("Hello, " + this.name + "!");
+        console.log(this);
+    }
+}
+
+// Add a method to Object's prototype
+Object.prototype.greet = function () {
+    console.log("hello everyone");
+}
+
+myname.greet();   // ✅ Works: hello everyone
+mypower.greet();  // ✅ Works: hello everyone
+
+
+// 🧠 Explanation (Refined and Clear):
+// ✅ All JavaScript objects inherit from Object.prototype by default.
+// This includes:
+
+// Plain objects ({}),
+
+// Arrays ([]),
+
+// Functions (function() {}),
+
+// And even other built-in types like strings and numbers (after boxing).
+
+// So when we add a method like greet() to Object.prototype, it becomes available to arrays, objects, functions, and more.
+
+// ❌ Important Note (Improved version of your "note"):
+// If you add a method to Array.prototype, String.prototype, or Function.prototype,
+// ➡️ only that type and its subtypes can access it.
+// Objects created using {} do not inherit from Array.prototype or String.prototype.
+
+// 🔄 Example:
+
+// Array.prototype.sayHi = function () {
+//     console.log("Hi from array!");
+// };
+
+// myname.sayHi();      // ✅ Works: It's an array
+// mypower.sayHi();     // ❌ Error: mypower is not an array
+
+// String.prototype.sayHello = function () {
+//     console.log("Hello from string!");
+// };
+
+// "nikhil".sayHello(); // ✅ Works
+// mypower.sayHello();  // ❌ Error
+
+
+
+// 📝 Summary:
+
+// In JavaScript, all objects (including arrays, functions, etc.) inherit from Object.prototype. So when you add a method to Object.prototype, it becomes available to almost everything.
+// However, if you add a method to Array.prototype, only arrays can access it. Objects do not inherit from arrays, strings, or functions — inheritance only works down the prototype chain, not across types.
+
+
+
+
+
+
+
+// ********* Prototype Inheritance in JavaScript *********
+
+
+
+// What Is Prototype Inheritance?
+// Prototype inheritance means an object can access properties or methods of another object by linking to it via the prototype chain.
+
+// In simple terms:
+// If object B inherits from object A, then B can use everything A has.
+
+
+
+
+
+// Base object (acts like a parent class)
+const user = {
+    name: "nikhil",
+    age: 22,
+    isActive: true,
+};
+
+// Another object that will inherit from user
+const Teacher = {
+    makevideo: true,
+};
+
+// Another object
+const TeachingSupport = {
+    isavailable: true,
+};
+
+// Another object that inherits from TeachingSupport using OLD approach
+const TAsupport = {
+    isavailable: true,
+
+    // 🔶 Old approach to set prototype
+    __proto__: TeachingSupport
+    // Now TAsupport can access properties of TeachingSupport
+};
+
+
+// 🔷 Modern approach using Object.setPrototypeOf()
+// Set prototype of Teacher to user (Teacher inherits from user)
+Object.setPrototypeOf(Teacher, user);
+
+// Now Teacher has access to `name`, `age`, `isActive`
+
+// Set prototype of TAsupport to Teacher (TAsupport inherits from Teacher)
+Object.setPrototypeOf(TAsupport, Teacher);
+
+// Now TAsupport can access all:
+// → its own properties
+// → properties from Teacher
+// → and properties from user (through prototype chain)
+
+
+
+// ✅ Final Summary:
+// Prototype inheritance allows objects to share behavior.
+
+// Object.setPrototypeOf(child, parent) sets the parent.
+
+// JavaScript objects follow a chain (called prototype chain) to look for properties/methods.
+
+// Keep prototype chains shallow for better performance and readability.
