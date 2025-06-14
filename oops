@@ -1,0 +1,63 @@
+//oops
+
+
+//object literal---->>object
+
+
+const user = {
+    name:"nikhil",
+    age: 22,
+    isActive: true,
+    hobbies: ["reading", "coding", "gaming"],
+    grearting: function() {
+        console.log("Hello, " + this.name + "!");
+        console.log(this);
+        
+    },
+}
+
+console.log(user.name); // Accessing property using dot notation
+console.log(user["age"]); // Accessing property using bracket notation  
+console.log(user.hobbies[1]); // Accessing an element in the hobbies array
+console.log(user.grearting()); // Calling the method grearting
+console.log(this); // 'this' refers to the global object in non-strict mode, or undefined in strict mode
+
+
+
+
+
+//*************this keyword */
+
+
+function userInfo(name, age) {
+    this.name = name;
+    this.age = age;
+    console.log("Name:", this.name);
+    console.log("Age:", this.age);
+}
+
+
+userInfo("Nikhil", 22);
+
+ 
+    
+//****************new keyword */
+
+
+const userone = new userInfo("Nikhil", 22);
+const usertwo = new userInfo("Rohit", 25);
+console.log(userone);
+console.log(usertwo);
+
+//when we use new keyword it creates a new object and assigns the properties and methods to that object.
+// The 'this' keyword inside the constructor function refers to the new object being created.
+// The new object is returned implicitly, so we can access the properties and methods of the object using the variable we assigned it to.
+// In this case, userone and usertwo are instances of the userInfo object, each with their own name and age properties.
+//The 'new' keyword create the empty object and then it calls the constructor function with the 'this' keyword pointing to that empty object.
+
+
+//****************oops remaining */
+//Encapsulation
+// Abstraction
+// Inheritance
+// Polymorphism
