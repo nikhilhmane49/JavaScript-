@@ -1,0 +1,16 @@
+
+//call() method example
+// The call() method allows you to call a function with a specified this value and arguments.
+function userinfor(username) {
+    this.username = username;
+}
+
+function information(username,email,phone) {
+    userinfor.call(this,username);
+    this.email = email;
+    this.phone = phone;
+}
+
+const user = new information("john_doe", "H9P9H@example.com", "123-456-7890");
+
+console.log(user);
