@@ -1,0 +1,16 @@
+
+const userinfor = {
+    name: "nahavi",
+    age: 22,
+    isActive: true,
+}
+
+let printinfo=function(city, country) {
+    console.log(`Name: ${this.name}`);
+    console.log(`Age: ${this.age}`);
+    console.log(`City: ${city}`);
+    console.log(`Country: ${country}`);
+
+}
+
+printinfo.bind(userinfor, "Delhi", "India")(); // Using bind to set 'this' context and pass additional arguments
