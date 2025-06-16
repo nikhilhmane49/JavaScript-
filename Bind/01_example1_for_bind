@@ -10,7 +10,7 @@
 </body>
 <script>
     class React{
-        constructor(name,age){
+        constructor(){
             this.library = "React"
             this.server = "https://localhost:300"
 
