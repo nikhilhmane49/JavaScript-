@@ -1,0 +1,32 @@
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Closure</title>
+</head>
+<body>
+    
+    <button id="red">Red</button>
+    <button id="green">Green</button>
+
+
+</body>
+
+<script>
+    // **********************Closure Example
+
+    // This function returns another function that has access to the 'color' variable
+        function clickhandler(color){
+            return function(){
+                document.body.style.backgroundColor = color;
+            }
+        }
+
+        document.getElementById("red").onclick = clickhandler("Red");
+        document.getElementById("green").onclick = clickhandler("Green");
+</script>
+</html>
+
+
