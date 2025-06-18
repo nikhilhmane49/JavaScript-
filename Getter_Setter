@@ -1,0 +1,48 @@
+
+//****************getter and setter */
+
+
+
+
+// In JavaScript, get and set are special methods used in objects or classes to control how properties are accessed and modified.
+
+// The getter (get) allows us to define a method that runs when a property is read.
+
+// The setter (set) allows us to define a method that runs when a property is assigned a value.
+
+// They are useful when we want to create computed properties, perform validation, or hide internal data.
+
+
+// Getter and Setter in JavaScript Using Classes
+// Getter and setter methods allow you to define how properties of an object can be accessed and modified.
+class user{
+    constructor(name, age) {
+        this.name = name;
+        this.age = age;
+    }
+
+    get userName() {
+        return this.name.toUpperCase(); // Example: returning the name in uppercase
+    }
+    set userName(newName) {
+        this.name = newName;
+    }
+}
+
+const user1 = new user("Nikhil", 22);
+console.log(user1.userName); // Accessing the name using getter
+user1.userName = "John"; // Setting the name using setter
+console.log(user1.userName); // Accessing the updated name using getter
+
+
+
+// Where and Why get and set are used?
+// Use Case	Description
+// ✅ Encapsulation	: Hide internal variables and control how they are accessed or updated
+// ✅ Computed Properties :Combine multiple values into one readable value (fullName from firstName + lastName)
+// ✅ Validation	:You can add checks before allowing a value to be saved
+// ✅ Cleaner Syntax :You can read/write like a normal variable, but logic runs behind
+
+
+
+
